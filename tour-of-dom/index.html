@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tour of DOM</title>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <style>
+      li {
+        color: darksalmon;
+      }
+
+      .fruits-container li {
+        color: black;
+      }
+      .important-place {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>wellcome my DOM</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, amet
+        nihil. Molestiae, doloremque sequi suscipit voluptates laborum
+        laudantium repudiandae aliquid repellat eum voluptatum iusto cum
+        expedita officia quae distinctio tenetur!
+      </p>
+    </header>
+
+    <main id="main-container">
+      <section class="domBaba-container">
+        <h1>Mi awesome DOM de baba</h1>
+        <ul>
+          <li>jalali set</li>
+          <li>shafayat</li>
+          <li>bonobash</li>
+        </ul>
+      </section>
+      <section class="fruits-container">
+        <h1 id="fruits-title" class="some-class random-class blue-bg">
+          friuits i like
+        </h1>
+        <ul>
+          <li>jalali set</li>
+          <li>shafayat</li>
+          <li>bonobash</li>
+        </ul>
+      </section>
+      <section>
+        <h1>Mi awesome DOM de baba</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Banana</li>
+          <li>carrot</li>
+        </ul>
+      </section>
+      <section id="places-container" class="large-text">
+        <h1 id="places-title">place i like to visit</h1>
+        <ul id="places-list">
+          <li class="important-place">sundoban</li>
+          <li class="important-place">bandorbon</li>
+          <li class="important-place">katabon</li>
+          <li class="other-place">salboon</li>
+        </ul>
+      </section>
+    </main>
+    <script src="./js/dom.js"></script>
+    <script src="./js/stylingIn.js"></script>
+    <script src="./js/append.js"></script>
+    <script>
+      // 1
+      // const student = {
+      //   name: "abul",
+      //   id: 11,
+      //   study: function (time) {
+      //     console.log(time, " study kortese ");
+      //   },
+      // };
+      // console.log("adding js inside the html file");
+
+      // 2 document.getElementbytagName
+      const liCollection = document.getElementsByTagName("li");
+      // console.log(liCollection);
+      // judi prottekta li alada alada lup chai taile for ... of
+      for (let li of liCollection) {
+        console.log(li.innerText); //innerText mane bitorer text
+      }
+
+      //3
+      const allHeading = document.getElementsByTagName("h1");
+      for (let h1 of allHeading) {
+        console.log(h1.innerText);
+      }
+      //4এখানে innerText শুধু "Name: Shahidul" নিয়ে আসে — কোনো <strong> ট্যাগ আসবে না। [<div id="info">  <strong>Name:</strong> Shahidul </div>]
+
+      const fruitsTittle = document.getElementById("fruits-title");
+      fruitsTittle.innerText = "fruits changed by js";
+      //5
+      const places = document.getElementsByClassName("important-places");
+      for (const place of places) {
+        console.log(place.innerText);
+      }
+
+      //querySelectorAll    // querySelector শুধুমাত্র প্রথম matching element-টাই রিটার্ন করে।
+
+      //  যদি তুমি সবগুলো element পেতে চাও, তাহলে querySelectorAll() ব্যবহার করতে হবে।
+
+      const someli = document.querySelector(".fruits-container li");
+      // console.log(someli);
+      for (const li of someli) {
+        console.log(li.innerText); // text shoho dekhabe sob
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event bubble</title>
+    <style>
+      ul {
+        border: 2px solid tomato;
+      }
+      section {
+        border: 2px solid blue;
+      }
+      body {
+        border: 2px solid green;
+      }
+      #item-2 {
+        border: 2px solid rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <section>ul>li#item-$*6>lorem2</section> -->
+    <h1>Exploring event bubble</h1>
+    <section id="list-container">
+      <ul id="list-ul">
+        <li id="item-1">Lorem, ipsum.</li>
+        <li id="item-2">Saepe, ipsam!</li>
+        <li id="item-3">Iste, saepe.</li>
+        <li id="item-4">Autem, voluptate.</li>
+        <li id="item-5">Eius, minus.</li>
+        <li id="item-6">Ut, asperiores.</li>
+      </ul>
+    </section>
+    <script>
+      ////
+      // document.getElementById("item-2").addEventListener("click", function () {
+      //   console.log("item-2  clicked");
+
+      ////////stop event bubble
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("item-2  clicked");
+          //event.stopPropagation();//ইভেন্টটি parent (বা উপরের) এলিমেন্টগুলোর মধ্যে আর ছড়াতে না পারে
+          event.stopImmediatePropagation();
+          // যখন কোনো একটা DOM এলিমেন্টে অনেকগুলো click বা অন্য ইভেন্ট listener থাকে,
+          // তখন stopImmediatePropagation() দিলে শুধু প্রথম যেটাতে এটা আছে সেটাই চলবে, বাকি সব থেমে যাবে।
+          // এবং bubbling ও আর হবে না।
+        });
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("item-2 second clicked");
+        });
+
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("item-2 Third clicked");
+        });
+      document
+        .getElementById("item-2")
+        .addEventListener("click", function (event) {
+          console.log("item-2 fourth clicked");
+        });
+      ///////////////
+      document.getElementById("list-ul").addEventListener("click", function () {
+        console.log("All ul clicked");
+      });
+      ////////
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function () {
+          console.log("list container checked");
+        });
+      /////////
+      document.getElementById("body").addEventListener("click", function () {
+        console.log("body checked");
+      });
+      //////////
+      document
+        .getElementById("list-3")
+        .addEventListener("click", function (event) {
+          console.log(event);
+        });
+    </script>
+  </body>
+</html>

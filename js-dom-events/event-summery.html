@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js DOM summery</title>
+  </head>
+  <body>
+    <h1>Final DOM event Handlers</h1>
+
+    <h3 id="handler-status">Defult Text</h3>
+
+    <p id="input-text">Defult input text</p>
+    <input id="input-feild" type="text" />
+    <button id="button-update">updated</button>
+    <br /><br />
+
+    <button onclick="handleOnClick()">
+      Handle event by add on click function
+    </button>
+
+    <button id="event-listener">haldle by event by addeventlisterner</button>
+
+    <script src="./js/eventSummery.js"></script>
+    <script>
+      //option:2 recap
+      document
+        .getElementById("button-update")
+        .addEventListener("click", function () {
+          const inputFeild = document.getElementById("input-feild");
+          const inpuText = inputFeild.value;
+
+          const p = document.getElementById("input-text");
+          p.innerText = inpuText;
+          inputFeild.value = " ";
+        });
+    </script>
+  </body>
+</html>

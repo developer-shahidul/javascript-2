@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event delegate</title>
+  </head>
+  <body>
+    <h1>Explore Event Delagate</h1>
+    <!-- section>ul#list-container>li.list-item*6>lorem3 -->
+    <section>
+      <ul id="list-container">
+        <li class="list-item">Lorem, ipsum dolor.</li>
+        <li class="list-item">Ex, laboriosam rem.</li>
+        <li class="list-item">Ducimus, esse vero!</li>
+        <li class="list-item">Veritatis, sequi rem?</li>
+        <li class="list-item">Accusantium, est facere!</li>
+        <li class="list-item">Repellat, illo maiores!</li>
+      </ul>
+      <button id="add-item">Add New Item</button>
+    </section>
+    <script>
+      //element add , element delet,
+      //akadik class ke loop chalno hoi
+      // const items = document.getElementsByClassName("list-item");
+      // for (const item of items) {
+      //   item.addEventListener("click", function (event) {
+      //     event.target.parentNode.removeChild(event.target);
+      //   });
+      // }
+
+      ///nidristo kore akti id dorte hoile loop chalno dorkar nai
+      document
+        .getElementById("list-container")
+        .addEventListener("click", function (event) {
+          // console.log(event);
+          event.target.parentNode.removeChild(event.target);
+        });
+      document
+        .getElementById("add-item")
+        .addEventListener("click", function () {
+          const listContainer = document.getElementById("list-container");
+          const list = document.createElement("li");
+          list.innerText = "brand new item added";
+          listContainer.appendChild(list);
+        });
+    </script>
+  </body>
+</html>

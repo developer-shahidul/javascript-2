@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Explore DOM event</h1>
+    <button onclick="makeGreen()">green</button>
+    <button id="make-red">red</button>
+
+    <!-- //////////////////// -->
+    <input id="user-email" type="text" />
+
+    <script>
+      document
+        .getElementById("make-red")
+        .addEventListener("click", function () {
+          document.body.style.backgroundColor = "red";
+        });
+
+      //green
+      function makeGreen() {
+        document.body.style.backgroundColor = "green";
+      }
+      ///kuyup event
+      document
+        .getElementById("user-email")
+        .addEventListener("keyup", function (event) {
+          console.log(event.target.value);
+        });
+    </script>
+  </body>
+</html>

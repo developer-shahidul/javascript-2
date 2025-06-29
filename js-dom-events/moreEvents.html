@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Events</title>
+  </head>
+  <body>
+    <h1>Explore More Evenst</h1>
+    <button id="event-more">More</button>
+    <input id="text-feild" type="text" />
+    <script>
+      //   document
+      //     .getElementById("text-feild")
+      //     .addEventListener("focus", function () {
+      //       console.log("Event tiggered inside the input feild");
+      //     });
+      //   /////////
+      //   document
+      //     .getElementById("text-feild")
+      //     .addEventListener("blur", function () {
+      //       console.log("Event tiggered inside the inpt feild blur");
+      //     });
+      //////
+      //   document
+      //     .getElementById("text-feild")
+      //     .addEventListener("keydown", function (event) {
+      //       console.log(event.target.value);
+      //     });
+      ////////
+      //   document
+      //     .getElementById("text-feild")
+      //     .addEventListener("keypress", function (event) {
+      //       console.log(event.target.value);
+      //     });
+      //////////
+      document
+        .getElementById("text-feild")
+        .addEventListener("keyup", function (event) {
+          console.log(event.target.value);
+        });
+      //////////
+      document
+        .getElementById("event-more")
+        .addEventListener("mousemove", function () {
+          console.log("Event triggered");
+        });
+      /////////////
+    </script>
+    <!-- 🧾 কত ধরনের DOM ইভেন্ট আছে?
+DOM ইভেন্ট অনেক রকমের হয়। নিচে কিছু গুরুত্বপূর্ণ ইভেন্ট টাইপ দিলাম:
+
+📌 Mouse Events:
+Event	Description
+"click"	মাউস ক্লিক করলে
+"dblclick"	ডাবল ক্লিক করলে
+"mousedown"	মাউস বাটন চেপে ধরলে
+"mouseup"	মাউস বাটন ছাড়লে
+"mouseenter"	কার্সর ঢুকলে
+"mouseleave"	কার্সর বের হলে
+"mousemove"	মাউস নাড়ালে
+
+📌 Keyboard Events:
+Event	Description
+"keydown"	কী চাপা শুরু করলে
+"keyup"	কী ছেড়ে দিলে
+"keypress"	(পুরাতন, এখন কম ব্যবহার হয়)
+
+📌 Form Events:
+Event	Description
+"submit"	ফর্ম সাবমিট করলে
+"change"	ইনপুট ফিল্ডের ভ্যালু পরিবর্তিত হলে
+"input"	টাইপ করার সময়
+"focus"	ইনপুটে কার্সর গেলে
+"blur"	ইনপুট থেকে কার্সর সরলে
+
+📌 Window Events:
+Event	Description
+"load"	পেজ লোড হলে
+"resize"	উইন্ডোর আকার বদলালে
+"scroll"	স্ক্রল করলে
+"unload" -->
+  </body>
+</html>

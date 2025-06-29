@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="sicret-info">my sicret info</h1>
+    <input type="text" id="delet-confirm" placeholder="pleace tipe delet" />
+    <button id="btn-delet" disabled>delete</button>
+    <script>
+      document
+        .getElementById("delet-confirm")
+        .addEventListener("keyup", function (event) {
+          const text = event.target.value; //এই লাইনটির সহজ অর্থ হলো: "ইনপুট ফিল্ডে এই মুহূর্তে যা লেখা আছে, সেটাকে নাও এবং text নামের একটি ভেরিয়েবলের মধ্যে রাখো।"
+          const deletButton = document.getElementById("btn-delet");
+
+          if (text === "delete") {
+            deletButton.removeAttribute("disabled");
+          } else {
+            deletButton.setAttribute("disabled", true);
+          }
+        });
+
+      document
+        .getElementById("btn-delet")
+        .addEventListener("click", function () {
+          const sicret = document.getElementById("sicret-info");
+          sicret.style.display = "none";
+        });
+    </script>
+  </body>
+</html>

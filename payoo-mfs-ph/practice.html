@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>payoo home page</title>
+    <title>payoo mafs ,adMoney or cashout</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link
@@ -13,48 +13,54 @@
     />
   </head>
   <body>
-    <main class="flex justify-center">
-      <div class="mockup-phone">
+    <div class="flex justify-center">
+      <div class="mockup-phone border-primary">
         <div class="camera"></div>
         <div class="display">
           <div class="artboard artboard-demo phone-1">
-            <!-- available balance -->
-
-            <div>
-              <div class="stats shadow">
-                <div class="stat py-2">
-                  <div id="acount-balance" class="stat-value text-4xl">
-                    9400
-                  </div>
-                  <div class="stat-desc">available balance</div>
+            <!-- total amount stat  -->
+            <div class="stats shadow">
+              <div class="stat">
+                <div id="acount-balance" class="stat-value text-center">
+                  9000
                 </div>
+                <div class="stat-title">Total Acoun Balance</div>
               </div>
             </div>
             <div class="divider"></div>
-            <!-- user action button -->
+            <!-- button start  -->
             <div>
-              <button id="button-show-addMoney" class="btn btn-md">
-                add money
+              <button
+                id="show-addMoney-button"
+                class="btn btn-outline btn-secondary"
+              >
+                Add Money
               </button>
-              <button id="button-show-cashout" class="btn btn-md">
+              <button
+                id="show-cashout-button"
+                class="btn btn-outline btn-secondary"
+              >
                 cashout
               </button>
             </div>
+            <!-- button end -->
             <div class="divider"></div>
-            <!-- add money to start -->
+            <!-- add money start -->
+
             <div
               id="addMoney-form"
               class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
             >
-              <form class="card-body py-5">
+              <form class="card-body">
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text"> Amount</span>
+                    <span class="label-text">Add Money</span>
                   </label>
                   <input
                     type="text"
-                    id="input-ad-money"
+                    id="add-money-input"
                     placeholder="Amount"
+                    inputmode="numeric"
                     class="input input-bordered"
                     required
                   />
@@ -64,37 +70,38 @@
                     <span class="label-text">Pin</span>
                   </label>
                   <input
-                    type="password"
                     id="pin-number-input"
-                    placeholder="password"
+                    type="password"
+                    placeholder="Enter Your Pin Number"
                     class="input input-bordered"
-                    autocomplete="on"
                     required
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button id="btn-add-money" class="btn btn-primary">
+                  <button id="addMoney-button" class="btn btn-primary">
                     Add Money
                   </button>
                 </div>
               </form>
             </div>
-            <!-- add money from end   -->
+
+            <!-- add money end -->
 
             <!-- cashout start  -->
             <div
               id="cashout-form"
               class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
             >
-              <form class="card-body py-5">
+              <form class="card-body">
                 <div class="form-control">
                   <label class="label">
-                    <span class="label-text"> Amount</span>
+                    <span class="label-text">Amount</span>
                   </label>
                   <input
                     type="text"
-                    id="input-cashout"
-                    placeholder="cash out amount"
+                    id="cashout-amount-input"
+                    placeholder="Cashout Aomount"
+                    inputmode="numeric"
                     class="input input-bordered"
                     required
                   />
@@ -104,17 +111,16 @@
                     <span class="label-text">Pin</span>
                   </label>
                   <input
-                    type="password"
                     id="cashout-pin"
-                    placeholder="password"
+                    type="password"
+                    placeholder="Enter Your Pin Number"
                     class="input input-bordered"
-                    autocomplete="on"
                     required
                   />
                 </div>
                 <div class="form-control mt-6">
-                  <button id="btn-cashout" class="btn btn-primary">
-                    cashout
+                  <button id="cashout-button" class="btn btn-primary">
+                    Cashout
                   </button>
                 </div>
               </form>
@@ -123,10 +129,7 @@
           </div>
         </div>
       </div>
-    </main>
-    <!-- <script src="./js/home.js"></script> -->
-    <script src="./js/addMoney.js"></script>
-    <script src="./js/cashout.js"></script>
-    <script src="./js/fetures.js"></script>
+    </div>
+    <script src="./js/practice.js"></script>
   </body>
 </html>

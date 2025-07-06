@@ -194,12 +194,14 @@ main {
 
 #History-container {
   padding-top: 200px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   text-align: center;
 }
 .history-list-container {
   border-radius: 8px;
   border: 1px solid gray;
+  margin-bottom: 10px;
+}
+.block {
+  margin-top: 200px;
+  background-color: #b4f461;
 }

@@ -9,6 +9,21 @@ function getElementValueById(id) {
   return textNumber;
 }
 
+// Toggle button home button and block button
+const toggleBtn = document.getElementById("block-btn");
+const homeSection = document.getElementById("home-section");
+const blockSection = document.getElementById("block-container");
+toggleBtn.addEventListener("click", function () {
+  if (homeSection.classList.contains("hidden")) {
+    homeSection.classList.remove("hidden");
+    blockSection.classList.add("hidden");
+    toggleBtn.innerText = "block";
+  } else {
+    homeSection.classList.add("hidden");
+    blockSection.classList.remove("hidden");
+    toggleBtn.innerText = "Home";
+  }
+});
 // button click to button bg-color chanege function
 function showBgColorButton(event) {
   const showDonateButton = document.getElementById("show-donate-btn");
@@ -40,6 +55,7 @@ function showDonateElement(id) {
 
   document.getElementById(id).classList.remove("hidden");
 }
+
 //All card call history add
 
 document
@@ -52,6 +68,7 @@ document
   .addEventListener("click", function () {
     showDonateElement("History-container");
   });
+
 //card two history add
 function addDonationHistory(amount, title) {
   const div = document.createElement("div");

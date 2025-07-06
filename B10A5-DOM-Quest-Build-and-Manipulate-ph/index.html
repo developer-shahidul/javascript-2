@@ -21,8 +21,7 @@
     <section class="hero">
       <div class="nav">
         <div>
-          <button class="hero-btn">blog</button>
-          <button class="hero-btn hidden">home</button>
+          <button id="block-btn" class="hero-btn">blog</button>
         </div>
         <div class="flex">
           <img class="size" src="./assets/logo.png" alt="" />
@@ -35,18 +34,18 @@
             <span>BDT</span>
           </div>
         </div>
-        <div class="show-button">
-          <button id="show-donate-btn" class="show-donate-button">
-            Donation
-          </button>
-          <button id="show-history-btn" class="show-history-button">
-            History
-          </button>
-        </div>
       </div>
     </section>
 
-    <main>
+    <main id="home-section">
+      <div class="show-button">
+        <button id="show-donate-btn" class="show-donate-button">
+          Donation
+        </button>
+        <button id="show-history-btn" class="show-history-button">
+          History
+        </button>
+      </div>
       <section id="donate-AllCard">
         <!-- CARD 1 -->
         <div class="Donate-card padding-top">
@@ -168,25 +167,14 @@
           </div>
         </div>
       </section>
-
-      <!-- block section  -->
-      <section class="block hidden">
-        <h1>Important FAQ</h1>
-        <div class="accordion-item">
-          <input type="radio" name="accordion" id="acc2" />
-          <label for="acc2" class="accordion-label"
-            >I forgot my password. What should I do?</label
-          >
-          <div class="accordion-content">
-            Click on "Forgot Password" on the login page and follow the
-            instructions sent to your email.
-          </div>
-        </div>
-      </section>
-      <!-- History section start  -->
-      <section id="History-container" class=""></section>
-      <!-- History section end  -->
     </main>
+    <!-- block section  -->
+    <section id="block-container" class="block hidden">
+      <h1>Important FAQ</h1>
+    </section>
+    <!-- History section start  -->
+    <div id="History-container" class="hidden"></div>
+    <!-- History section end  -->
 
     <script src="./js/donateAdd.js"></script>
     <script src="./js/donateUtilities.js"></script>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM build and Manipulate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/pc.css" />
+    <link
+      rel="stylesheet"
+      media="only screen and (max-width: 500px)"
+      href="./style/mobile.css"
+    />
+  </head>
+  <body class="lexend">
+    <section class="hero">
+      <div class="nav">
+        <div>
+          <button class="hero-btn">blog</button>
+          <button class="hero-btn hidden">home</button>
+        </div>
+        <div class="flex">
+          <img class="size" src="./assets/logo.png" alt="" />
+          <h4 class="heading">Donate Bangladesh</h4>
+        </div>
+        <div class="flexCoin">
+          <img class="coinSize" src="./assets/coin.png" alt="coin" />
+          <div class="flex">
+            <p id="balance-coin" class="gray-1 font-size16">5500</p>
+            <span>BDT</span>
+          </div>
+        </div>
+        <div class="show-button">
+          <button id="show-donate-btn" class="show-donate-button">
+            Donation
+          </button>
+          <button id="show-history-btn" class="show-history-button">
+            History
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="donate-AllCard">
+        <!-- CARD 1 -->
+        <div class="Donate-card padding-top">
+          <div>
+            <img
+              class="donate-img"
+              class=""
+              src="./assets/noakhali.png"
+              alt=""
+            />
+          </div>
+          <div class="card-content">
+            <div class="Donate-coin border-radius">
+              <img class="coinSize" src="./assets/coin.png" alt="coin" />
+              <p id="food-balance" class="gray-1 font-size16 margin0">00</p>
+              <span>BDT</span>
+            </div>
+            <h3 id="flood-donate-district" class="donate-title">
+              Donate for Flood at Noakhali, Bangladesh
+            </h3>
+            <p class="Donate-text">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <div class="donate-input-btn">
+              <input
+                id="flood-donate-input"
+                class="donate-input"
+                type="text"
+                placeholder="Write Donation Amount"
+              />
+              <button id="food-donate" class="donate-button">Donate Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="Donate-card">
+          <div>
+            <img class="donate-img" src="./assets/feni.png" alt="" />
+          </div>
+          <div class="card-content">
+            <div class="Donate-coin border-radius">
+              <img class="coinSize" src="./assets/coin.png" alt="coin" />
+              <p id="flood2-coin" class="gray-1 font-size16 margin0">600</p>
+              <span>BDT</span>
+            </div>
+            <h3 id="flood2-title" class="donate-title">
+              Donate for Flood Relief in Feni,Bangladesh
+            </h3>
+            <p class="Donate-text">
+              The recent floods in Feni have devastated local communities,
+              leading to severe disruption and loss. Your generous donation will
+              help provide immediate aid, including food, clean water, and
+              medical supplies, to those affected by this calamity. Together, we
+              can offer crucial support and help rebuild lives in the aftermath
+              of this disaster. Every contribution counts towards making a real
+              difference. Please consider donating today to assist those in
+              urgent need.
+            </p>
+            <div class="donate-input-btn">
+              <input
+                id="flood2-input-ammount"
+                class="donate-input"
+                type="text"
+                placeholder="Write Donation Amount"
+              />
+              <button id="flood2-donate-btn" class="donate-button">
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- CARD 3 -->
+        <div class="Donate-card">
+          <div>
+            <img
+              class="donate-img"
+              class=""
+              src="./assets/quota-protest.png"
+              alt=""
+            />
+          </div>
+          <div class="card-content">
+            <div class="Donate-coin border-radius">
+              <img class="coinSize" src="./assets/coin.png" alt="coin" />
+              <p id="guota-coin" class="gray-1 font-size16 margin0">2400</p>
+              <span>BDT</span>
+            </div>
+            <h3 id="quota-title" class="donate-title">
+              Aid for Injured in the Quota Movement
+            </h3>
+            <p class="Donate-text">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <div class="donate-input-btn">
+              <input
+                id="guota-input-balance"
+                class="donate-input"
+                type="text"
+                placeholder="Write Donation Amount"
+              />
+              <button id="quota-donate-btn" class="donate-button">
+                Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- block section  -->
+      <section class="block hidden">
+        <h1>Important FAQ</h1>
+        <div class="accordion-item">
+          <input type="radio" name="accordion" id="acc2" />
+          <label for="acc2" class="accordion-label"
+            >I forgot my password. What should I do?</label
+          >
+          <div class="accordion-content">
+            Click on "Forgot Password" on the login page and follow the
+            instructions sent to your email.
+          </div>
+        </div>
+      </section>
+      <!-- History section start  -->
+      <section id="History-container" class=""></section>
+      <!-- History section end  -->
+    </main>
+
+    <script src="./js/donateAdd.js"></script>
+    <script src="./js/donateUtilities.js"></script>
+  </body>
+</html>

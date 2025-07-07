@@ -79,3 +79,23 @@ function addDonationHistory(amount, title) {
   `;
   document.getElementById("History-container").appendChild(div);
 }
+
+// success notification
+
+function showModal(id) {
+  document.getElementById(id).classList.remove("hidden");
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.add("hidden");
+}
+
+document.getElementById("close-btn").addEventListener("click", function () {
+  closeModal("message-Noakhali");
+});
+document.getElementById("close-btn2").addEventListener("click", function () {
+  closeModal("message-feni");
+});
+document.getElementById("close-btn3").addEventListener("click", function () {
+  closeModal("message-quota");
+});

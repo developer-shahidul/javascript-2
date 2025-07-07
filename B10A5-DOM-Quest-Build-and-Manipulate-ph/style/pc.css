@@ -17,6 +17,7 @@
 .size {
   height: 48px;
   aspect-ratio: 1/1;
+  margin: 0 auto;
 }
 .coinSize {
   height: 28px;
@@ -85,6 +86,7 @@ body {
   color: #111111;
   background-color: #b4f461;
   border: none;
+  cursor: pointer;
 }
 
 /* hero section end  */
@@ -105,6 +107,7 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   color: #111111;
+  cursor: pointer;
 }
 
 .show-history-button {
@@ -114,6 +117,7 @@ body {
   color: rgba(17, 17, 17, 0.7);
   font-weight: 600;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 main {
   padding-top: 10px;
@@ -184,24 +188,84 @@ main {
   border-radius: 8px;
   font-size: 1.25rem;
   font-weight: 600;
+  cursor: pointer;
   border: 0.5px solid rgba(17, 17, 17, 0.05);
-}
-.block {
-  padding-top: 140px;
 }
 
 /* .show-history-button  */
 
-#History-container {
-  padding-top: 200px;
+.padding-history {
+  padding: 200px 80px 0px 80px;
   text-align: center;
 }
 .history-list-container {
   border-radius: 8px;
   border: 1px solid gray;
   margin-bottom: 10px;
-}
-.block {
-  margin-top: 200px;
   background-color: #b4f461;
+}
+
+/* block-secton */
+.block {
+  background-color: #b4f461;
+  max-width: 70%;
+  margin: 0 auto;
+  border-radius: 8px;
+  margin-top: 220px;
+}
+.block-header {
+  text-align: center;
+  padding: 20px 0;
+}
+.according-level {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px;
+  transition: background-color 0.3s;
+}
+.according-level:hover {
+  background-color: #abcf7b;
+}
+input[type="checkbox"]:checked + .according-level .according-icon {
+  transform: rotate(180deg);
+}
+.according-text {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 16px;
+  background-color: #abcf7b;
+}
+input[type="checkbox"]:checked ~ .according-text {
+  max-height: 200px;
+  padding: 20px 16px;
+}
+input[type="checkbox"] {
+  display: none;
+}
+
+/* message  */
+.message {
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid gray;
+  background-color: #ffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  max-width: 400px;
+  width: 100%;
+}
+.close-btn {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  border: none;
+  cursor: pointer;
 }

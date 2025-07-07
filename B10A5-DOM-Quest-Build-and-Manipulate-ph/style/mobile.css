@@ -21,3 +21,17 @@ main {
 .show-button {
   top: 150px;
 }
+
+/* history  */
+
+.padding-history {
+  padding: 150px 0 0 0;
+}
+
+/* ///acording */
+.block {
+  max-width: 100%;
+}
+.message {
+  width: 80%;
+}

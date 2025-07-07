@@ -21,6 +21,9 @@ document.getElementById("food-donate").addEventListener("click", function () {
     ).innerText;
 
     addDonationHistory(addDonateConin, foodDonate);
+
+    // message
+    showModal("message-Noakhali");
   } else {
     alert("your balance  is low,please add balance and try again");
   }
@@ -48,6 +51,9 @@ document
       const floodTitle = document.getElementById("flood2-title").innerText;
 
       addDonationHistory(flood2InputAmmount, floodTitle);
+
+      //success massage
+      showModal("message-feni");
     } else {
       alert("your balance  is low,please add balance and try again");
     }
@@ -75,6 +81,10 @@ document
       const quotaTitle = document.getElementById("quota-title").innerText;
 
       addDonationHistory(quotaInputBalanceAdd, quotaTitle);
+
+      // message success
+
+      showModal("message-quota");
     } else {
       alert("your balance  is low,please add balance and try again");
     }
